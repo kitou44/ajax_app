@@ -7,8 +7,8 @@ class PostsController < ApplicationController
   def create
     Post.create(content: params[:content])
   end
-
   def checked
+    binding.pry
     post = Post.find(params[:id])
     if post.checked 
       post.update(checked: false)
